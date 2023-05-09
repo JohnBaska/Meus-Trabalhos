@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática</title>
+    <style>
+        body{
+            font: normal 20pt arial;
+        }
+        input{
+            font: normal 20pt arial;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Transformando valores monetários</h1>
+    R$<input type="number" name="valor" id="valor">
+    <input type="button" value="Dollar" onclick = "Transf1()">
+    <input type="button" value="Euro" onclick = "Transf2()">
+    <div id = 'res'>Resposta</div>
+    <script>
+        function Transf1(){
+            var tn = window.document.getElementById('valor');
+            var res = window.document.getElementById('res');
+            var n = Number(tn.value);
+            var s = n/5.43;
+            res.innerText = `${s.toLocaleString ('pt-BR', {style: 'currency',currency: 'USD'})}`
+        }
+        function Transf2(){
+            var tn = window.document.getElementById('valor');
+            var res = window.document.getElementById('res');
+            var n = Number(tn.value);
+            var s = n/5.79;
+            res.innerText = `${s.toLocaleString ('pt-BR', {style: 'currency',currency: 'EUR'})}`
+        }
+    </script>
+
+    US$<input type="number" name="valor2" id="valor2">
+    <input type="button" value="Reais" onclick = "Transf3()">
+    <input type="button" value="Euro" onclick = "Transf4()">
+    <div id = 'res2'>Resposta</div>
+    <script>
+        function Transf3(){
+            var tn2 = window.document.getElementById('valor2');
+            var res2 = window.document.getElementById('res2');
+            var n2 = Number(tn2.value);
+            var s2 = n2*5.43;
+            res2.innerText = `${s2.toLocaleString ('pt-BR', {style: 'currency',currency: 'BRL'})}`
+        }
+        function Transf4(){
+            var tn2 = window.document.getElementById('valor2');
+            var res2 = window.document.getElementById('res2');
+            var n2 = Number(tn2.value);
+            var s2 = n2*0.95;
+            res2.innerText = `${s2.toLocaleString ('pt-BR', {style: 'currency',currency: 'EUR'})}`
+        }
+    </script>
+
+    €<input type="number" name="valor3" id="valor3">
+    <input type="button" value="Dollar" onclick = "Transf5()">
+    <input type="button" value="Reais" onclick = "Transf6()">
+    <div id = 'res3'>Resposta</div>
+    <script>
+        function Transf5(){
+            var tn3 = window.document.getElementById('valor3');
+            var res3 = window.document.getElementById('res3');
+            var n3 = Number(tn3.value);
+            var s3 = n3/0.95;
+            res3.innerText = `${s3.toLocaleString ('pt-BR', {style: 'currency',currency: 'USD'})}`
+        }
+        function Transf6(){
+            var tn3 = window.document.getElementById('valor3');
+            var res3 = window.document.getElementById('res3');
+            var n3 = Number(tn3.value);
+            var s3 = n3 * 5.43;
+            res3.innerText = `${s3.toLocaleString ('pt-BR', {style: 'currency',currency: 'BRL'})}`
+        }
+    </script>
+</body>
+</html>

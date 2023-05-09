@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática</title>
+    <style>
+        body{
+            font: normal 20pt arial;
+            background-color: rgb(73, 73, 255);          
+            color: white;
+            
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //Pedi o nome do usuario e guardei dentro da variavel nome
+        var nome = window.prompt(`Qual é seu nome?`);
+
+        //Pedi o salário do usuario, transformei em int e guardei dentro da variavel salario
+        var salário = Number(window.prompt(`Qual é seu sálario mensal?`));
+
+        document.write(`Olá <strong>${nome}</strong>, tudo bem? Espero que sim. <br/> 
+        Aqui vai algumas informações sobre seu nome e seu salário`);
+        document.write(`<br/>Seu nome tem: <strong>${nome.length} letras </strong>`);
+        document.write(`<br/>Seu nome em maiúsculas: <strong>${nome.toUpperCase()}</strong>`);
+        document.write(`<br/>Seu nome em minúsculas: <strong>${nome.toLowerCase()}</strong>`);
+
+        //transformei o salario do usuario em dolar e guardei dentro da variavel dolar
+        var dolar = salário/5.43
+
+        //transformei o salario do usuario em euros e guardei dentro da variavel euro
+        var euro = salário/5.74
+
+        document.write(`<br/>Seu salário mensal corresponde a: 
+        <br/><strong>${salário.toLocaleString ('pt-BR', {style: 'currency',currency: 'BRL'})}</strong>
+        <br/><strong>${dolar.toLocaleString ('pt-BR', {style: 'currency',currency: 'USD'})}</strong>
+        <br/><strong>${euro.toLocaleString ('pt-BR', {style: 'currency',currency: 'EUR'})}</strong>`);
+
+        var s1 = window.document.getElementsByTagName ('strong');
+        s1.style.color = 'blue';
+        s1.style.background = 'lightblue';
+        var s2 = window.document.getElementsByTagName ('strong')[1];
+        s2.style.color = 'blue'; 
+        s2.style.background = 'lightblue';
+        var s3 = window.document.getElementsByTagName ('strong')[2];
+        s3.style.color = 'blue';
+        s3.style.background = 'lightblue';
+        var s4 = window.document.getElementsByTagName ('strong')[3];
+        s4.style.color = 'blue';
+        s4.style.background = 'lightblue';
+        var s5 = window.document.getElementsByTagName ('strong')[4];
+        s5.style.color = 'green'; 
+        s5.style.background = 'lawngreen';
+        var s6 = window.document.getElementsByTagName ('strong')[5];
+        s6.style.color = 'green';
+        s6.style.background = 'lawngreen';
+        var s7 = window.document.getElementsByTagName ('strong')[6];
+        s7.style.color = 'green'; 
+        s7.style.background = 'lawngreen';    
+    </script>
+    
+</body>
+</html>

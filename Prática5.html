@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    <p>Você é de que país?</p> 
+    <input type="text" name="país" id="país"> <input type="button" value="Verificar" onclick="nacionalidade()">
+    <div id="res">Respota</div>
+    <script>
+        function nacionalidade()
+        { 
+            var paíst = window.document.getElementById('país');
+            var res = window.document.getElementById('res');
+            var país = Text(paíst.value);
+
+            if(país == 'Brasil' || país == 'brasil')
+            {
+                res.innerText = `<p>Você é brasileiro</p>`;
+            }else
+            {
+                //res.innerHTML = `<p>Você é estrangeiro</p>`;
+            }
+        }
+    </script>
+
+</body>
+</html>

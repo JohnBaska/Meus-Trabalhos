@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática</title>
+    <style>
+        body{
+            font: normal 20pt arial;
+            background-color: blue;          
+            color: white;
+            
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt(`Qual é seu nome`);
+        var salário = Number(window.prompt(`Qual é seu sálario mensal?`));
+
+        document.write(`Olá <strong>${nome}</strong>, tudo bem? Espero que sim. <br/> 
+        Aqui vai algumas informações sobre seu nome e seu salário`);
+        document.write(`<br/>Seu nome tem: ${nome.length} letras`);
+        document.write(`<br/>Seu nome em maiúsculas: ${nome.toUpperCase()}`);
+        document.write(`<br/>Seu nome em minúsculas: ${nome.toLowerCase()}`);
+
+        var dolar = salário/5.43
+        var euro = salário/5.74
+
+        document.write(`<br/>Seu salário mensal corresponde a: 
+        <br/>${salário.toLocaleString ('pt-BR', {style: 'currency',currency: 'BRL'})}
+        <br/>${dolar.toLocaleString ('pt-BR', {style: 'currency',currency: 'USD'})}
+        <br/>${euro.toLocaleString ('pt-BR', {style: 'currency',currency: 'EUR'})}`);    
+    </script>
+    
+</body>
+</html>
